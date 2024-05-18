@@ -1,14 +1,12 @@
 FROM ubuntu:22.04
 
-# setting an env variable so that we dont get user prompt when building ubuntu machine
+# Setting an env variable so that we dont get user prompt when building ubuntu machine
 ENV DEBIAN_FRONTEND=noninteractive 
 
 WORKDIR /minecraft
 
 # Command to run when building the image
-# Using package manager to install openjdk requirement
-# wget to retrive files from internet (minecraft server)
-# removing uneccesary files from container
+# Using package manager to install requirements
 RUN apt-get update && apt-get install -y \
     openjdk-17-jdk \
     wget \
@@ -24,6 +22,7 @@ RUN echo "eula=true" > eula.txt
 EXPOSE 25565
 
 # Arguments being passed to java command
+#Minecraft server uses java to configure the server
 CMD ["java", "-Xmx1024M", "-Xms1024M", "-jar", "server.jar", "nogui" ]
 
 
