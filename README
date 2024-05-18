@@ -41,6 +41,8 @@ This will start the container and the server will be building, takes a few secon
 
 `docker ps`
 
+If we insepct the files of the container on Docker Desktop, the eula.txt we created is in the correct directory:
+
 ![eula](./images/container_file.png)
 
 
