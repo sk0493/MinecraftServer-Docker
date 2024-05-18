@@ -1,0 +1,33 @@
+
+# Snippets
+
+`docker build -t minecraft:latest .`
+Make sure directory is where Dockerfile is
+
+`docker image ls`
+
+`docker run -p 25565:25565 --name minecraft-server -d minecraft:latest`
+Need to mention the port mapping, running the 'minecraft-server' container in the background. 
+This will start the container and the server will be building, takes a few seconds for the server to finish building.
+
+
+`docker ps`
+
+![eula](./images/container_file.png)
+
+
+
+
+`docker logs minecraft-server`
+
+Inspecting the logs of the container, we will see which Version of Minecraft we need to run. This is important when we launch the minecraft client, we have to make sure it is the same version.
+
+In the log we will see this:
+
+```
+[Server thread/INFO]: Starting minecraft server version 1.20.3
+```
+
+![minecraftgame](./images/joining_server.png)
+
+
