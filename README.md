@@ -101,8 +101,8 @@ I ran my container using the CLI, but a docker-compose file could've also been u
 
 # Next steps
 
+- Use Docker-compose file to configure the server container, you can enable server settings such as whitelisting etc
 - Have a container volume that is used to store all the server data. This means that if the server fails, player's progression is not lost.
-- Include mods, these would be saved inside the container volume
 - Deploy to the cloud so that the server is not hosted on local machine.
 
 
